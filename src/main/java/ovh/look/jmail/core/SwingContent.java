@@ -21,32 +21,18 @@
  * questions.
  */
 
-package ovh.look.jmail;
+package ovh.look.jmail.core;
 
 import javax.swing.*;
 import java.awt.*;
-import java.io.File;
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
 
-public class MessageBody extends JPanel {
+public class SwingContent extends JavaContent {
 
-    String text = "<html><body><i>Unable to read message</i></body></html>";
-
-    public MessageBody(MailStore.MessageInfo messageInfo) {
-        String fileName = messageInfo.folderPath + File.separatorChar + messageInfo.bodyFileField;
-        Path filePath = Path.of(fileName);
-        try {
-            text = Files.readString(filePath);
-        } catch (IOException e) {
-
+    public SwingContent(JPanel panel, String jarFileName) {
+        super(jarFileName);
+        if (theUI instanceof JComponent swingUI) {
+            panel.setLayout(new BorderLayout());
+            panel.add(BorderLayout.CENTER, swingUI);
         }
-        setBackground(Color.white);
-        setMinimumSize(new Dimension(800, 600));
-        setLayout(new BorderLayout());
-        JEditorPane msg = new JEditorPane("text/html", text);
-        msg.setEditable(false);
-        add(BorderLayout.CENTER, msg);
     }
 }

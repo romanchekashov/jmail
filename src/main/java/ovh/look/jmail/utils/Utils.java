@@ -21,7 +21,7 @@
  * questions.
  */
 
-package ovh.look.jmail;
+package ovh.look.jmail.utils;
 
 import javafx.application.Platform;
 

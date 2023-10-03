@@ -34,7 +34,7 @@ import java.util.Properties;
 public class MailStore {
 
     static MailStore mailStore;
-    static MailStore getMailStore() {
+    public static MailStore getMailStore() {
         getMailStoreDir();
         if (mailStore == null) {
             mailStore = new MailStore();
@@ -43,7 +43,7 @@ public class MailStore {
     }
 
     private static String rootDir = null;
-    static String getMailStoreDir() {
+    public static String getMailStoreDir() {
         if (rootDir == null) {
             String dir = System.getProperty("mail_store");
             if (dir == null) {
@@ -96,7 +96,7 @@ public class MailStore {
         return msgFiles.toArray(new String[0]);
     }
 
-    MessageInfo[] getMessages(String folder) {
+    public MessageInfo[] getMessages(String folder) {
         String[] files = getMessageFiles(folder);
         MessageInfo[] infos = new MessageInfo[files.length];
         for (int i=0; i < files.length; i++) {
@@ -107,9 +107,9 @@ public class MailStore {
         return infos;
     }
 
-    static class AttachmentDesc {
-        String attachmentType;
-        String attachmentName;
+    public static class AttachmentDesc {
+        public String attachmentType;
+        public String attachmentName;
 
         public AttachmentDesc(String aType, String aName) {
             attachmentType = aType;
@@ -117,16 +117,16 @@ public class MailStore {
         }
     }
 
-    static class MessageInfo {
-        String folderPath;
-        String fileName;
-        String toField;
-        String fromField;
-        String ccField;
-        String subjectField;
-        String dateField;
-        String bodyFileField;
-        AttachmentDesc[] attachments;
+    public static class MessageInfo {
+        public String folderPath;
+        public String fileName;
+        public String toField;
+        public String fromField;
+        public String ccField;
+        public String subjectField;
+        public String dateField;
+        public String bodyFileField;
+        public AttachmentDesc[] attachments;
     }
 
     MessageInfo getMessageInfo(String folder, String msgFile) {

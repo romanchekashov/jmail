@@ -24,6 +24,9 @@
 package ovh.look.jmail;
 
 import javafx.application.Platform;
+import ovh.look.jmail.layout.FolderPane;
+import ovh.look.jmail.layout.MessagesArea;
+import ovh.look.jmail.messages.ComposeMessage;
 import ovh.look.jmail.utils.AssetUtils;
 
 import javax.imageio.ImageIO;
@@ -144,7 +147,7 @@ public class JMail {
         }
         return icon;
     }
-    static JButton createButton(String image, int targetSize, String text, String toolTip) {
+    public static JButton createButton(String image, int targetSize, String text, String toolTip) {
         ImageIcon icon = loadIconImage(image, targetSize);
         JButton b = new JButton(text, icon);
         b.setToolTipText(toolTip);

@@ -21,7 +21,9 @@
  * questions.
  */
 
-package ovh.look.jmail;
+package ovh.look.jmail.layout;
+
+import ovh.look.jmail.MailStore;
 
 import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
@@ -54,7 +56,7 @@ public class MessageHeaders extends JScrollPane implements ListSelectionListener
         msgArea.updateMessagePane();
     }
 
-    MailStore.MessageInfo getCurrentMessage() {
+    public MailStore.MessageInfo getCurrentMessage() {
         if (messages != null && messages.length > messageNumber) {
             return messages[messageNumber];
         } else {

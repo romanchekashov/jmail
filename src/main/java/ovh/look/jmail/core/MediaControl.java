@@ -21,7 +21,7 @@
  * questions.
  */
 
-package ovh.look.jmail;
+package ovh.look.jmail.core;
 
 import javafx.application.Platform;
 import javafx.beans.Observable;
@@ -47,6 +47,7 @@ import javafx.scene.media.MediaPlayer;
 import javafx.scene.media.MediaView;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+import ovh.look.jmail.utils.Utils;
 
 import java.awt.*;
 

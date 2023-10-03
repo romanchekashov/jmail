@@ -21,26 +21,34 @@
  * questions.
  */
 
-package ovh.look.jmail;
+package ovh.look.jmail.layout;
 
-import javafx.embed.swing.JFXPanel;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.paint.Color;
+import ovh.look.jmail.MailStore;
 
-public class FXContent extends JavaContent {
+import javax.swing.*;
+import java.awt.*;
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
 
-    Scene scene;
+public class MessageBody extends JPanel {
 
-    FXContent(JFXPanel jfxPanel, String jarFileName) {
-        super(jarFileName);
+    String text = "<html><body><i>Unable to read message</i></body></html>";
 
-        if (theUI instanceof Parent fxUI) {
-            var root = new BorderPane();
-            scene = new Scene(root, Color.CORNSILK);
-            root.setCenter(fxUI);
-            jfxPanel.setScene(scene);
+    public MessageBody(MailStore.MessageInfo messageInfo) {
+        String fileName = messageInfo.folderPath + File.separatorChar + messageInfo.bodyFileField;
+        Path filePath = Path.of(fileName);
+        try {
+            text = Files.readString(filePath);
+        } catch (IOException e) {
+
         }
+        setBackground(Color.white);
+        setMinimumSize(new Dimension(800, 600));
+        setLayout(new BorderLayout());
+        JEditorPane msg = new JEditorPane("text/html", text);
+        msg.setEditable(false);
+        add(BorderLayout.CENTER, msg);
     }
 }

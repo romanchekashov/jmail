@@ -21,7 +21,7 @@
  * questions.
  */
 
-package ovh.look.jmail;
+package ovh.look.jmail.core;
 
 import javafx.beans.binding.Bindings;
 import javafx.beans.binding.BooleanExpression;
@@ -38,6 +38,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebHistory;
 import javafx.scene.web.WebView;
+import ovh.look.jmail.utils.Utils;
 
 public class WebContent {
 

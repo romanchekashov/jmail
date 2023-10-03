@@ -21,7 +21,7 @@
  * questions.
  */
 
-package ovh.look.jmail;
+package ovh.look.jmail.layout;
 
 import javax.swing.*;
 import java.awt.*;
@@ -30,7 +30,7 @@ public class MessagesArea extends JSplitPane {
 
     static int PREFERRED_WIDTH = 900;
     String folderName;
-    MessageHeaders messageHeaders;
+    public MessageHeaders messageHeaders;
     MessagePane messagePane;
     JScrollPane sPane;
 

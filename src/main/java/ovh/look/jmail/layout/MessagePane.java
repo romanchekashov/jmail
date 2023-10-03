@@ -21,7 +21,11 @@
  * questions.
  */
 
-package ovh.look.jmail;
+package ovh.look.jmail.layout;
+
+import ovh.look.jmail.JMail;
+import ovh.look.jmail.MailStore;
+import ovh.look.jmail.utils.Utils;
 
 import javax.swing.*;
 import java.awt.*;

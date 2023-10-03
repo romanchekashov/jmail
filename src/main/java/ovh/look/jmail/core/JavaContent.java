@@ -21,7 +21,7 @@
  * questions.
  */
 
-package ovh.look.jmail;
+package ovh.look.jmail.core;
 
 import java.io.File;
 import java.lang.reflect.Method;
@@ -37,7 +37,7 @@ public class JavaContent {
 
     protected Object theUI;
 
-    JavaContent(String jarFileName) {
+    public JavaContent(String jarFileName) {
         try {
             JarFile jarFile = new JarFile(jarFileName);
             Manifest manifest = jarFile.getManifest();

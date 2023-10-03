@@ -21,18 +21,26 @@
  * questions.
  */
 
-package ovh.look.jmail;
+package ovh.look.jmail.core;
 
-import javax.swing.*;
-import java.awt.*;
+import javafx.embed.swing.JFXPanel;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.paint.Color;
 
-public class SwingContent extends JavaContent {
+public class FXContent extends JavaContent {
 
-    SwingContent(JPanel panel, String jarFileName) {
+    Scene scene;
+
+    public FXContent(JFXPanel jfxPanel, String jarFileName) {
         super(jarFileName);
-        if (theUI instanceof JComponent swingUI) {
-            panel.setLayout(new BorderLayout());
-            panel.add(BorderLayout.CENTER, swingUI);
+
+        if (theUI instanceof Parent fxUI) {
+            var root = new BorderPane();
+            scene = new Scene(root, Color.CORNSILK);
+            root.setCenter(fxUI);
+            jfxPanel.setScene(scene);
         }
     }
 }

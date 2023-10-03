@@ -21,7 +21,7 @@
  * questions.
  */
 
-package ovh.look.jmail;
+package ovh.look.jmail.messages;
 
 import javafx.beans.binding.Bindings;
 import javafx.beans.binding.StringExpression;
@@ -37,6 +37,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
 import javafx.scene.web.HTMLEditor;
 import javafx.stage.Stage;
+import ovh.look.jmail.MailStore;
 
 import java.io.File;
 import java.io.IOException;

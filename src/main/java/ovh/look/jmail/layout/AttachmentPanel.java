@@ -21,10 +21,16 @@
  * questions.
  */
 
-package ovh.look.jmail;
+package ovh.look.jmail.layout;
 
 import javafx.application.Platform;
 import javafx.embed.swing.JFXPanel;
+import ovh.look.jmail.MailStore;
+import ovh.look.jmail.core.FXContent;
+import ovh.look.jmail.core.MediaControl;
+import ovh.look.jmail.core.SwingContent;
+import ovh.look.jmail.core.WebContent;
+import ovh.look.jmail.utils.Utils;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
