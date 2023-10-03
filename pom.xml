@@ -78,6 +78,18 @@
                 <configuration>
                     <mainClass>${mainClass}</mainClass>
                 </configuration>
+                <executions>
+                    <execution><!-- Run our version calculation script -->
+                        <id>Version Calculation</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>exec</goal>
+                        </goals>
+                        <configuration>
+                            <executable>${basedir}/build.sh</executable>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
             <plugin>
                 <groupId>org.openjfx</groupId>
@@ -152,7 +164,7 @@
 <!--                    <linuxPackageName>treefx</linuxPackageName>-->
 <!--                    <linuxAppCategory>Utilities</linuxAppCategory>-->
 <!--                    <linuxMenuGroup>Utilities</linuxMenuGroup>-->
-                    <icon>${project.basedir}/mail.128x128.png</icon>
+                    <icon>${project.basedir}/jmail.icns</icon>
                     <javaOptions>
                         <option>-Dfile.encoding=UTF-8</option>
                         <option>-Dmail_store=/Applications/JMail.app/Contents/content/jmail-store</option>
