@@ -155,6 +155,7 @@
                     <icon>${project.basedir}/mail.128x128.png</icon>
                     <javaOptions>
                         <option>-Dfile.encoding=UTF-8</option>
+                        <option>-Dmail_store=/Applications/JMail.app/Contents/content/jmail-store</option>
                     </javaOptions>
                 </configuration>
             </plugin>
