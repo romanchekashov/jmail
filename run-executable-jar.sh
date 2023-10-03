@@ -1,2 +1,2 @@
 cd target
-java -jar jmail-1.0.0-shaded.jar
+java -jar -Dmail_store=./../content/jmail-store jmail-1.0.0-shaded.jar
