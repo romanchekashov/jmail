@@ -23,6 +23,13 @@ mvn clean install
 mvn clean compile javafx:jlink jpackage:jpackage
 ```
 
+## Debug
+1. Run app in debug mode
+```shell
+mvn clean javafx:run@debug
+```
+2. In intellij idea run Remote debug
+
 ## Resources
 ### Initial resources
 - [YouTube: Building and Deploying Java Client Desktop Applications with JDK 17 and Beyond](https://www.youtube.com/watch?v=jb7m9dL1iSI)
@@ -45,4 +52,4 @@ mvn archetype:generate \
 - [Download JavaFX](https://gluonhq.com/products/javafx/)
 - [Maven JavaFX](https://central.sonatype.com/artifact/org.openjfx/javafx)
 - [OpenJFX Docs Samples](https://github.com/openjfx/samples/tree/master)
-- [intellij idea : how to debug a java:fx maven project?](https://stackoverflow.com/questions/61340702/intellij-idea-how-to-debug-a-javafx-maven-project)
+- [intellij idea: how to debug a java:fx maven project?](https://stackoverflow.com/questions/61340702/intellij-idea-how-to-debug-a-javafx-maven-project)
