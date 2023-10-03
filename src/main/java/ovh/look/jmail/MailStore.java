@@ -23,6 +23,8 @@
 
 package ovh.look.jmail;
 
+import ovh.look.jmail.utils.AssetUtils;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -50,8 +52,11 @@ public class MailStore {
                 dir = System.getenv("MAIL_STORE");
             }
             if (dir == null) {
-                dir = MailStore.class.getClassLoader().getResource("content/jmail-store").getPath();
-//                dir = System.getProperty("user.home") + File.separatorChar + "jmail-store";
+//                dir = MailStore.class.getClassLoader().getResource("content/jmail-store").getPath();
+                System.out.println(System.getProperty("user.dir"));
+                System.out.println(AssetUtils.getCurrentPath());
+                dir = "/content/jmail-store";
+                dir = System.getProperty("user.dir") + File.separatorChar + "content" + File.separatorChar + "jmail-store";
             }
             rootDir = dir;
         }

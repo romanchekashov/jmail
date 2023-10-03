@@ -45,3 +45,4 @@ mvn archetype:generate \
 - [Download JavaFX](https://gluonhq.com/products/javafx/)
 - [Maven JavaFX](https://central.sonatype.com/artifact/org.openjfx/javafx)
 - [OpenJFX Docs Samples](https://github.com/openjfx/samples/tree/master)
+- [intellij idea : how to debug a java:fx maven project?](https://stackoverflow.com/questions/61340702/intellij-idea-how-to-debug-a-javafx-maven-project)

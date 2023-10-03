@@ -51,6 +51,27 @@
                 <version>3.8.1</version>
             </plugin>
             <plugin>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>3.2.0</version>
+                <executions>
+                    <execution>
+                        <id>copy-resource-one</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${basedir}/target/content</outputDirectory>
+                            <resources>
+                                <resource>
+                                    <directory>${basedir}/content</directory>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>3.0.0</version>
@@ -123,11 +144,15 @@
                     <modulePaths>
                         <modulePath>${java.home}/jmods</modulePath>
                     </modulePaths>
+                    <appContentPaths>
+                        <appContentPath>${project.basedir}/content</appContentPath>
+                    </appContentPaths>
+<!--                    <resourceDir>target/content</resourceDir>-->
 <!--                    <linuxShortcut>true</linuxShortcut>-->
 <!--                    <linuxPackageName>treefx</linuxPackageName>-->
 <!--                    <linuxAppCategory>Utilities</linuxAppCategory>-->
 <!--                    <linuxMenuGroup>Utilities</linuxMenuGroup>-->
-<!--                    <icon>${project.basedir}/duke.png</icon>-->
+                    <icon>${project.basedir}/mail.128x128.png</icon>
                     <javaOptions>
                         <option>-Dfile.encoding=UTF-8</option>
                     </javaOptions>
