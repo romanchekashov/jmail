@@ -1,0 +1,8 @@
+from=kcr@openjdk.org
+to=prr@openjdk.org
+cc=openjfx-dev@openjdk.org, client-libs-dev@openjdk.org
+subject=Re: JavaOne 2022
+body=msg10-body.html
+datetime=10/3/22 10:01 AM
+type-attachment1=javafx
+attachment1=pie.jar

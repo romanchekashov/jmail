@@ -1,0 +1,8 @@
+from=prr@openjdk.org
+to=kcr@openjdk.org
+cc=openjfx-dev@openjdk.org, client-libs-dev@openjdk.org
+subject=Re: JavaOne 2022
+body=msg7-body.html
+datetime=10/2/22 4:06 PM
+type-attachment1=image
+attachment1=santa_clara_3.jpg

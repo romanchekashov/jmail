@@ -17,13 +17,28 @@
 
         <javafx.version>21</javafx.version>
         <javafx.maven.plugin.version>0.0.6</javafx.maven.plugin.version>
-        <mainClass>ovh.look.jmail.App</mainClass>
+        <mainClass>ovh.look.jmail.JMail</mainClass>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
+            <version>${javafx.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-swing</artifactId>
+            <version>${javafx.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-web</artifactId>
+            <version>${javafx.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-media</artifactId>
             <version>${javafx.version}</version>
         </dependency>
     </dependencies>
@@ -53,7 +68,7 @@
                         <!-- Usage: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>ovh.look.jmail.App</mainClass>
+                            <mainClass>ovh.look.jmail.JMail</mainClass>
                             <stripDebug>true</stripDebug>
                             <compress>2</compress>
                             <noHeaderFiles>true</noHeaderFiles>
@@ -61,6 +76,15 @@
                             <launcher>jmail</launcher>
                             <jlinkImageName>jmail</jlinkImageName>
                             <jlinkZipName>jmail</jlinkZipName>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>debug</id>
+                        <configuration>
+                            <mainClass>ovh.look.jmail.JMail</mainClass>
+                            <options>
+                                <option>-agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=*:5005</option>
+                            </options>
                         </configuration>
                     </execution>
                 </executions>
@@ -94,7 +118,7 @@
                     <appVersion>1.0.0</appVersion>
                     <vendor>ovh.look</vendor>
                     <destination>target/dist</destination>
-                    <module>jmail/ovh.look.jmail.App</module>
+                    <module>jmail/ovh.look.jmail.JMail</module>
                     <runtimeImage>target/jmail</runtimeImage>
                     <modulePaths>
                         <modulePath>${java.home}/jmods</modulePath>

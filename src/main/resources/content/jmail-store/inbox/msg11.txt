@@ -1,0 +1,10 @@
+from=prr@openjdk.org
+to=kcr@openjdk.org
+cc=openjfx-dev@openjdk.org, client-libs-dev@openjdk.org
+subject=Re: JavaOne 2022
+body=msg11-body.html
+datetime=10/3/22 11:17 AM
+type-attachment1=other
+attachment1=Desktop_presentation.pptx
+type-attachment2=other
+attachment2=Desktop_presentation.pdf

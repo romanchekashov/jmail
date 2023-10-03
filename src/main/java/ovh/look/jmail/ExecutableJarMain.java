@@ -5,6 +5,6 @@ package ovh.look.jmail;
  */
 public class ExecutableJarMain {
     public static void main(String[] args) {
-        App.main(args);
+        JMail.main(args);
     }
 }
